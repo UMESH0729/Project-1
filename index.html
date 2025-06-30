@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Varadhi</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+                padding: 0px;
+                margin: 0px;
+                box-sizing: border-box;
+                overflow-x:hidden;
+                
+            }
+            .scrol{
+                background-color: orangered;
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+                padding: 10px;
+            }
+            .options{
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                justify-content: space-between;
+                position: sticky !important ;
+                top: 0px;
+                background-color: white;
+                border-bottom: 1px solid gray;
+                z-index: 1000;
+                
+            }
+            .middleitems{
+                padding: 20px;
+                display: flex;
+                gap: 50px;
+                align-items: center;
+                font-size: 20px 
+                
+            }
+            .middleitems a,select{
+                text-decoration: none;
+                color: black;
+                border: none;
+            }
+            .heading{
+                text-align: center;
+                color: rgb(47, 5, 5);;
+            }
+            .tags{
+                padding: 40px;
+                font-size: 20px;
+            }
+            .middleitems a:hover{
+                color: orangered;
+            }
+            .s1{
+                font-size: 20px;
+            }
+            .s1:hover{
+                color: orangered;                
+            }
+            .logins{
+                display: flex;
+                gap: 20px;
+                font-size: 25px;
+                padding-right: 30px;
+                
+
+            }
+            
+            .tags a{
+                text-decoration: none;
+                color: orangered;
+
+            }
+            .filter{
+                border: 1px solid black;
+                width: 100px;
+                padding: 10px;
+                margin-left: 40px;
+                border-radius: 10px;
+                text-align: center;
+            }
+            .l5__sub{
+                display: flex;
+                gap: 60px;
+                padding-right: 80px;
+                align-items: center;
+            }
+            .l5{
+                display:flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 20px;
+                margin-left: 30px;
+                margin-right: 20px;
+                
+            }
+            .line{
+                font-weight: bolder;
+                color: gray;
+                font-size: 15px;
+
+            }
+            .sort{
+                border: 1px solid black;
+                width: fit-content;
+                padding: 5px;
+                border-radius: 10px;
+            }
+            .bottom{
+                display: flex;
+                flex-direction: row;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            .stock{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                flex: 30%;
+
+            }
+            .items{
+                display: flex;
+                flex: 70%;
+            }
+            .price__sub{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                
+                
+            }
+            .box{
+                width: 80px;
+            }
+            .collection{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 20px;
+                
+            }
+            .left{
+                margin-left: 50px;
+                border-right: 1px solid gray;
+                padding-right: 30px;
+                height: 500px;
+                overflow-y: scroll;
+            }
+            .items{
+                margin: 10px;
+                
+            }
+            .firstline{
+                display: flex;
+                flex-direction: row;
+                gap: 30px;
+                margin: 30px;
+                justify-content: space-evenly;
+                
+            }
+            .firstline__one{
+                display: flex;
+                flex-direction: column;
+                flex: 25%;
+                text-align: center;
+            }
+            .firstline__two{
+                display: flex;
+                flex-direction: column;
+                flex: 25%;
+            }
+            .firstline__three{
+                display: flex;
+                flex-direction: column;
+                flex: 25%;
+            }
+            .firstline__four{
+                display: flex;
+                flex-direction: column;
+                flex: 25%;
+            }
+            .umesss{
+              display: flex;
+              flex-direction: row;
+             justify-content: space-between;
+             position: relative;  
+             top: 8.5%;            
+            }
+            .pic{
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 0px !important;
+                position: relative;
+                
+            }
+            .topselling{
+                color: white;
+                background-color: orangered;
+                padding: 5px;
+                position: static;
+                
+
+            }
+            .disc{
+                color: white;
+                background-color: green;
+                padding: 5px;
+                
+            }
+            .w1{
+                border: 1px solid black;
+                padding: 5px;
+                margin-top: 20px;
+            }
+            .cost{
+                text-align: left;
+                padding-left: 20px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                font-size: 20px;
+            }
+            .cart1{
+                font-size: 15px;
+                width: 80%;
+                background-color: rgb(71, 7, 7);
+                color: white;
+                padding: 5px;
+            }
+            .titles{
+                height: 50px;
+                margin-top: 10px;
+                font-weight: bolder;
+                
+            }
+            .stock{
+                gap: 10px;
+                font-size: 20px;
+            }
+            .b1{
+                font-size: 20px;
+            }
+            .price{
+                font-size: 20px;
+                
+            }
+            .collect1{
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            .collect2{
+                text-align: right;
+            }
+            .pricecolor{
+                text-decoration: none !important;
+                color: black !important;
+            }
+            .soldout{
+               font-size: 15px;
+                width: 90%;
+                background-color: gray;
+                color: white;
+                padding: 5px;
+                
+            }
+            .ending{
+                border: 2px solid black;
+                height: 650px;
+            }
+            .ending{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgb(232, 122, 44);
+            }
+            .bottomlogo{
+                width: 100%;
+                  text-align: center;
+                
+            }
+            .bottomtext{
+                display: flex;
+                flex-direction: row;
+                font-size: 20px;
+                gap: 500px;
+                margin-top: 100px;
+                color: white;
+            }
+            .bquick{
+                padding-top: 10px;
+                font-size: medium;
+            }
+            .copy{
+                border-top: 1px solid gray;
+                width: 100%;
+                margin-top: 20px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 30px;
+                color: white;
+            }
+            .lan{
+                margin-left: 500px;
+                background-color: brown;
+                color: white;
+                padding: 5px;
+            }
+            .logins p:hover{
+                color: orangered;
+            }
+            .star1{
+                text-decoration: none;
+                color: orange;
+            }
+            .iconstop{
+                border-radius: 100%;
+
+            }
+            .topitems{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                box-sizing: border-box;
+                
+            }
+            figcaption{
+                font-size: 20px;
+                text-align: center;
+            }
+            figure{
+                text-align: center;
+            }
+            .iconstop:hover{
+                box-shadow: 10px 0px 10px gray;
+                border: 1px solid gray;
+            }
+            .bigimage{
+                box-sizing: border-box;
+                margin-top: 20px;
+            }
+            .vcopt{
+                color: orangered;
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        <div class="scrol">
+            <marquee direction="left" scrollamount="20"><i class="fa fa-heart"></i> Our Website just got a Tasty makeOver<i class="fa fa-pagelines" style="color: green;"></i> Dive in</marquee>
+        </div>
+        <div class="options">
+            <div class="logo">
+                <img src="https://vaaradhifarms.com/cdn/shop/files/VF_logo_final-02.png?v=1737443815&width=320" width="160px" height="69px" alt="logo">
+            </div>
+            <div class="middleitems">
+                <a href="#">Home</a>
+                <select class="s1">
+                    <option class="vcopt" value="">View Collections</option>
+                    <option class="vcopt" value="Honey">Honey</option>
+                    <option class="vcopt" value="ghee">Ghee</option>
+                    <option class="vcopt" value="pickles">Pickles</option>
+                    <option class="vcopt" value="seeds">Seeds</option>
+                    <option class="vcopt" value="sweets & Snacks">Sweets & Snacks</option>
+                    <option class="vcopt" value="cereals">Cereals</option>
+                    <option class="vcopt" value="millets">Millets</option>
+                    <option class="vcopt" value="oil">Oil</option>
+                    <option class="vcopt" value="pulses">Pulses</option>
+                    <option class="vcopt" value="rice">Rice</option>
+                </select>
+                <a  href="#">Shop All</a>
+                <a href="#">FAQ</a>
+                <a href="#">Track Your Order</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="logins">
+                <p class="helper"><i class="fa fa-search"></i></p>
+                <p><i class="fa fa-user"></i></p>
+                <p><i class="fa fa-shopping-cart"></i></p>
+            </div>
+        </div>
+        <div class="topitems">
+            <div>
+                <figure>
+                    <img class="iconstop" src="https://vaaradhifarms.com/cdn/shop/files/Honey1.png?v=1698854743&width=375" width="100px" height="100px">
+                    <figcaption><Strong>Honey</Strong></figcaption>
+                </figure>
+            </div>
+            <div>
+                <figure>
+                    <img class="iconstop" src="https://vaaradhifarms.com/cdn/shop/files/Ghee_HighRes.jpg?v=1698928244&width=375" width="100px" height="100px">
+                    <figcaption><strong>Ghee</strong></figcaption>
+                </figure>
+            </div>
+            <div>
+                <figure>
+                    <img class="iconstop" src="https://vaaradhifarms.com/cdn/shop/files/Photoroom-20250117_174904.png?v=1737118654&width=375" width="100px" height="100px">
+                    <figcaption><strong>Oils</strong></figcaption>
+                </figure>
+            </div>
+            <div>
+                <figure>
+                    <img class="iconstop" src="https://vaaradhifarms.com/cdn/shop/files/AviseLaddu.png?v=1732278982&width=375" width="100px" height="100px">
+                    <figcaption><strong>Sweets & Snacks</strong></figcaption>
+                </figure>
+            </div>
+            <div>
+                <figure>
+                    <img class="iconstop" src="https://vaaradhifarms.com/cdn/shop/files/pickle_collection_image_-_v1.png?v=1732697129&width=375" width="100px" height="100px">
+                    <figcaption><strong>Pickles</strong></figcaption>
+                </figure>
+            </div>
+            <div>
+                <figure>
+                    <img class="iconstop" src="https://vaaradhifarms.com/cdn/shop/files/Photoroom-20250120_162613_1.png?v=1737376360&width=375" width="100px" height="100px">
+                    <figcaption><strong>New Launch</strong></figcaption>
+                </figure>
+            </div>
+        </div>
+         <div class="bigimage">
+            <img src="https://vaaradhifarms.com/cdn/shop/files/HONEY-logo-change-web.jpg?v=1746468513&width=1944" width="100%" >
+            
+        </div>
+        <div class="heading">
+            <h1><strong>Shop All</strong></h1>
+        </div>
+        <div class="tags">
+            <a href="#">Home</a> / Shop All
+        </div>
+        <div class="l5">
+            <div class="filter"><i class="fa fa-filter"></i> Filter</div>
+            <div class="l5__sub">
+                <div><strong>97 Products</strong></div>
+                <div class="line">|</div>
+                <div class="line">||</div>
+                <div class="line">|||</div>
+                <div class="line">||||</div>
+                
+                <select class="sort">
+                    <option value="">Sort by</option>
+                    <option value="Best selling">Best selling</option>
+                    <option value="price">price</option>
+                    <option value="price">Price, Low to High</option>
+                    <option value="date">Date, New to Old</option>
+                </select>
+            </div>
+        </div>
+        <hr class="hor" style="margin-left: 60px; margin-right: 80px;">
+        <div class="bottom">
+            <div class="left">
+                <div class="b1"><strong>Availability</strong> <br> 
+                    <div class="stock">               
+                        <div>
+                            <input type="checkbox" name="stock">In Stock <br>
+                            <input type="checkbox" name="stock">Out of Stock
+                        </div>
+                        <div>
+                            (85) <br> (12)
+                        </div>
+                    </div>
+                    <hr> 
+                </div> 
+                <div class="price"><strong>Price </strong><br>
+                    <input class="pricecolor" type="range">
+                    <div class="price__sub">
+                        <div>From <br><input class="box" type="number" placeholder="0.00"></div>
+                        <div>To <br><input class="box" type="number" placeholder="3490.00"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="collect1"> <strong>Collections </strong><br>
+                <div class="collection">
+                    <div>
+                        <input type="checkbox">Ghee <br>
+                        <input type="checkbox">Honey <br>
+                        <input type="checkbox">Pickles <br>
+                        <input type="checkbox">Sweets & Snacks <br>
+                        <input type="checkbox">Sweetner And Salts
+                    </div>
+                    <div style="text-align: right;">
+                        (1) <br> (3) <br> (7) <br> (12) <br> (6)
+                    </div>
+               </div>
+               </div> <hr>
+
+               <div class="collect1"> <strong>Quantity</strong><br>
+                <div class="collection">
+                    <div>
+                        <input type="checkbox">3 g <br>
+                        <input type="checkbox">25 g <br>
+                        <input type="checkbox">50 g <br>
+                        <input type="checkbox">100 g <br>
+                        <input type="checkbox">150 g <br>
+                        <input type="checkbox">200 g  <br>
+                        <input type="checkbox">250 g  <br>
+                        <input type="checkbox">500 g  <br>
+                        <input type="checkbox">80 gm  <br>
+                        <input type="checkbox">25 gms <br>
+                        <input type="checkbox">100 gms <br>
+                        <input type="checkbox">125 gms  <br>
+                        <input type="checkbox">150 gms  <br>
+                        <input type="checkbox">200 gms  <br>
+                        <input type="checkbox">250 gms  <br>
+                        <input type="checkbox">500 gms  <br>
+                        <input type="checkbox">1000 gms  <br>
+                        <input type="checkbox">1 Kg  <br>
+                        <input type="checkbox">1 L  <br>
+                        <input type="checkbox">1 pc  <br>
+                        <input type="checkbox">2 pcs 
+                    </div>
+                    <div class="collect2">
+                        (1) <br> (1) <br> (3) <br> (12) <br> (1) <br>(14) <br>(2) <br> (2) <br> (3) <br> (1) <br> (1) <br> (1) <br> (4) <br> (2) <br> (5) <br> (5) <br> (1) <br> (2) <br> (2) <br> (2) <br> (2)
+                    </div>
+               </div>
+               </div>   
+            </div>
+
+            <!-------------------------------------items-------------------------------------->
+            <div class="itmes">
+                <div class="firstline">
+                    <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                                <div class="topselling"><i class="fa fa-fire"></i>Top Selling</div>
+                                <div class="disc">save 6%</div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/20250422_145310.png?v=1745565198&width=400"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Farm Fresh Natural Honey</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">1000 g</option>
+                                <option value="500">500 g</option>
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 940</strong> <strike>Rs. 1000.00</strike>
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div class="topselling"><i class="fa fa-fire"></i>Top Selling</div>
+                            <div class="disc">save </div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/20250423_202558_1.png?v=1745565566&width=1080"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px; ">A2 Desi Cow Cultured Ghee</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">1000 ml</option>
+                                <option value="500">500 ml</option>
+                                <option value="250">250 ml</option>
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 3,940</strong> 
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div class="topselling"><i class="fa fa-fire"></i>Top Selling</div>
+                            <div class="disc">save 5%</div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/20250405_164532.png?v=1743859831&width=400"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Wild Raw Forest Honey</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">1 Kg</option>
+                                <option value="500">500 g</option>
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 1140</strong> <strike>Rs. 1200.00</strike>
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                   <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div class="topselling"><i class="fa fa-fire"></i>Top Selling</div>
+                            <div class="disc">save </div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/Adityark_a_bag_of_a_tan_colored_product_filled_with_turmeric_ki_30bdb482-db0c-4404-8b6c-cb59bec40502.png?v=1685016262&width=400"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Unprocessed Natural Turmeric</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">1/2 Kg</option>
+                                <option value="500">1/4 Kg</option>
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 445</strong> 
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <!------------------------------------------second line------------------------------------->
+                <div class="firstline">
+                    <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div></div>
+                            <div class="disc">save </div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/image_519177bc-9938-4cfb-b9ad-8b723ca31af2.png?v=1689100808&width=400"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Natural Red Chilli Powder</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">1 Kg</option>
+                                <option value="1/2">1/2 Kg</option>
+                                <option value="1/4">1/4 Kg</option>
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 845</strong> 
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div></div>
+                            <div class="disc">save</div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/20250423_202638.png?v=1745565465&width=400"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Small Bee Forest Honey</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">500 gms</option>
+                                
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 1,325</strong> 
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div></div>
+                            <div class="disc">save </div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/WhatsApp_Image_2024-09-24_at_11.20.47_PM.jpg?v=1727416947&width=400"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Lakshman Phal Juice</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">500 ml</option>
+                                
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 875</strong> 
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                   <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div></div>
+                            <div class="disc">save 6%</div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/ecommified_Indian_dry_Saffron_-_kesar_on_a_brown_bowl_kitchen_b_bc1c5136-f9e9-4f28-8a0f-51d3308b093d.png?v=1705982784&width=400"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Authentic Kashmiri Saffron <br> 1gm</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">Default Title</option>
+                                
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 940</strong> <strike>Rs. 1000.00</strike>
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <!--------------------------------------------third line--------------------------------->
+                <div class="firstline">
+                    <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div></div>
+                            <div class="disc">save </div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/deepixelstudios_wild_turmeric_powder_in_a_pouch_1080x1080_6ffdbe7d-eba2-434a-940f-9d40d1290ee2.png?v=1714064230&width=400"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Forest Turmeric Powder</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">250 gms</option>
+                                
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 320</strong> 
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div></div>
+                            <div class="disc">save 18%</div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/LIP_BALM_ORIGINAL_TYPE_3.png?v=1750331198&width=900"
+                                 alt="image" width="250px" height="300px">
+                            </div>  
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Bee Wax Lip Balm Original</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">Default title</option>
+                                
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 279</strong> <strike>Rs. 339.00</strike>
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div></div>
+                            <div class="disc">save</div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/ecommified_dark_red_pickle_paste_soaking_in_oil_in_a_white_bowl_eef36501-a599-44f3-88c4-743bedafae43.webp?v=1717776675&width=400"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Gongura Pickle</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">250 g</option>
+                                
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 265</strong>
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                   <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div></div>
+                            <div class="disc">save </div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/42bellampowder.png?v=1730945058&width=400"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Jaggery Powder</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">1 Kg</option>
+                                
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 190</strong> 
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <!----------------------forth line---------------------------->
+                <div class="firstline">
+                    <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div></div>
+                            <div class="disc">save </div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/6Jaggery.png?v=1730907747&width=400"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Jaggery Bar</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">1 Kg</option>
+                                
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 180</strong> 
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div></div>
+                            <div class="disc">save</div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/ecommified_red_tomato_pickle_paste_soaking_in_oil_in_a_white_bo_c71296a6-5057-4889-91bb-ef92c5b4b189.webp?v=1718338434&width=400"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Tomato Pickle</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">250 g</option>
+                                
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 265</strong>
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div></div>
+                            <div class="disc">save 27%</div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/4.png?v=1731322032&width=400"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Korra Murukulu</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">250 g</option>
+                                
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 175</strong> <strike>Rs. 240.00</strike>
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                   <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div></div>
+                            <div class="disc">save 6%</div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/lgxiwva8_4b0ddc7f-5823-427d-a49c-109a18bda05d.png?v=1731351510&width=400"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Kobbari Laddu</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">250 g</option>
+                                
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 195</strong> <strike>Rs. 250.00</strike>
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+
+                 <!----------------------fifth line---------------------------->
+                <div class="firstline">
+                    <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div></div>
+                            <div class="disc">save </div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/ecommified_grated_dry_red_chilli_pickle_paste_in_a_white_bowl_f_6f4c1b1e-be34-4f0a-83d9-6fcde5168731.webp?v=1717779798&width=400"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Pandu Mirchi Pickle</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">250 g</option>
+                                
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 265</strong> 
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div></div>
+                            <div class="disc">save</div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/ecommified_black_pickle_paste_soaking_in_oil_in_a_white_bowl_fr_ef09eb14-ea5c-400d-bceb-29779d7b725e.webp?v=1717780032&width=400"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Karivepaku Pickle</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">250 g</option>
+                                
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 265</strong>
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div></div>
+                            <div class="disc">save 27%</div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/9.png?v=1731326527&width=400"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Sunni Laddu</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">250 g</option>
+                                
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 195</strong> <strike>Rs. 240.00</strike>
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                   <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div></div>
+                            <div class="disc">save</div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/Adityark_a_medium_tall_glass_jar_with_a_normal_black_lid_the_ja_ba41b589-5389-4c39-b8e0-c3480a91a5ce.png?v=1685025223&width=400"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Bee Pollen</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">250 g (Sold Out)</option>
+                                <option value="125 g">125 g (Sold Out)</option>
+                                
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 999</strong> 
+                        </div>
+                        <div>
+                            <button class="soldout">Sold Out</button>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <!-------------------------------sixth line--------------------------------------->
+
+                <div class="firstline">
+                    <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div></div>
+                            <div class="disc">save 12%</div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/Lavmurukulu.png?v=1750772505&width=400"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-half-o"></i>
+                             <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Lav Murukulu</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">250 g</option>
+                                
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 175</strong> <strike>199</strike>
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div></div>
+                            <div class="disc">save 12%</div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/RibbonPakoda.png?v=1750771530&width=1080"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star-half-o"></i>
+                             <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Ribbon Pakoda</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">250 g</option>
+                                
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 175</strong> <strike>199</strike>
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div></div>
+                            <div class="disc">save</div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/20250422_151907_1.png?v=1745566647&width=400"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Javithri</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">25 g</option>
+                                
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 156</strong> 
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                   <div class="firstline__one">
+                        <div class="pic">
+                            <div class="umesss">
+                            <div></div>
+                            <div class="disc">save</div>
+                            </div>
+                            <div>
+                                 <img src="https://vaaradhifarms.com/cdn/shop/files/20250422_144700.png?v=1745568991&width=400"
+                                 alt="image" width="250px" height="300px">
+                            </div>
+                           
+                        </div>
+                        <div  class="star1">
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                             <i class="fa fa-star"></i>
+                        </div>
+                        <div class="titles" style="font-size: 20px;">Cloves</div>
+                        <div>
+                            <select name="1000 g" class="w1" style="width: 90%;">
+                                <option value="">25 g</option>
+                                
+                            </select>
+                        </div>
+                        <div class="cost">
+                            <strong>Rs. 129</strong> 
+                        </div>
+                        <div>
+                            <button class="cart1">Add to Cart</button>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+
+                </div> <!--------------------bottom class closed--------------------------->
+
+                
+        </div>
+        <div class="ending">
+            <div class="bottomlogo">
+                <img src="https://vaaradhifarms.com/cdn/shop/files/VF_logo_final-02.png?v=1737443815&width=360" width="200px" height="100px">
+                <hr>
+            </div>
+            
+            <div class="bottomtext">
+                <div class="bquick">
+                    <strong>Quick Links</strong> <br>
+                    <br> Home <br> <br>View Collections <br><br> Shop All <br><br> FAQ <br><br> Track your Order <br><br> Contact Us
+                </div>
+                <div class="bquick">
+                    <strong>Customer Care</strong> <br>
+                    <br> FAQ <br><br> Shipping Policy <br><br> Refund Policy <br><br>Cancellation Policy <br><br> Terms of Service <br><br> Contact Information <br><br> wild Forest Honey Certificate <br><br> Dark forest Honey Certificate
+                </div>
+            </div>
+            
+            <div class="copy">
+                Copyright<i class="fa fa-copyright"></i> 2025 Vaaradhi Farms <br> Built by <strong>N.Umesh</strong>
+                <select name="EN" class="lan">
+                    <option value="EN">English</option>
+                </select>
+            </div>
+        </div>
+    </body>
+</html>
