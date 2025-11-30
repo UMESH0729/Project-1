@@ -3,6 +3,7 @@
     <head>
         <title>Varadhi</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <style>
             body{
                 padding: 0px;
@@ -345,63 +346,44 @@
             .vcopt{
                 color: orangered;
             }
-            @media(max-width:400px){
-                .middleitems{
-                    display: none;
-                }
-                .logins{
-                    display: none;
-                }
-                .options{
-                    display: flex;
-                    justify-content: center;
-                }
-                .topitems{
-                    display: none;
-                }
-                .bigimage{
-                   padding: 10px;
-                }
-                .line{
-                    display: none;
-                }
-                .l5{
-                    display: flex;
-                    width: 100%;
-                    justify-content: space-between;
-                }
-                .pro97{
-                    display: none;
-                }
-                .filter{
-                    font-size: 16px;
-                    width: 15vw;
-                    padding: 5px;
-                }
-                .sort{
-                    width: 15vw;    
-                }
-                .hor{
-                   width: 100vw;
-                }
-                .left{
-                    display: none;
-                }
-                .bottomtext{
-                  display: flex;
-                  justify-content: center;
-                  gap: 40px;
-                }
-                .lan{
-                margin-left: 150px;
-                background-color: brown;
-                color: white;
-                padding: 5px;
-                
-                }  
-                
-            }
-            
+            @media screen and (max-width: 768px) {
+    body { font-size: 16px; }
+    .options { flex-direction: column; padding: 10px; }
+    .middleitems, .logins, .topitems, .left { display: none; }
+    
+    /* 2 items per row */
+    .firstline {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin: 10px;
+    }
+    .firstlineone { 
+        flex: none !important; 
+        width: 100%; 
+        margin: 0;
+    }
+    
+    img { max-width: 100%; height: auto; max-height: 200px; }
+    .titles { font-size: 14px; height: auto; line-height: 1.2; }
+    .cost, .cart1 { font-size: 12px; padding: 4px; }
+    .filter, .sort { width: 100%; margin: 5px 0; font-size: 14px; }
+    .bottomtext { gap: 20px; flex-direction: column; margin-top: 20px; }
+    .lan { margin-left: 0; }
+    .topselling, .disc, .filter,.bquick{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .firstline { gap: 10px; }
+    .umesss { flex-direction: column; gap: 3px; font-size: 11px; }
+    .titles { font-size: 13px; }
+    .topselling, .disc, .filter,.bquick{
+        display: none;
+    }
+}
+          
             
         </style>
     </head>
